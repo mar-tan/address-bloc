@@ -9,6 +9,17 @@ RSpec.describe AddressBook do
     expect(entry.email).to eq expected_email
   end
 
+  context "#destructo_beam" do
+    it "ensures that there can be only none!" do
+      book.add_entry("Ming Lo", "212.555.4545", "ming@billy.net")
+      book.add_entry("Rob Roberts", "614.555.0000", "bob@hotmail.com")
+      book.add_entry("Kingston Cronkite", "410.885.2415", "king@kingdom.net")
+
+      book.destructo_beam
+      expect(book.entries.size).to eq(0)
+    end
+  end
+
   describe "attributes" do
     it "responds to entries" do
       expect(book).to respond_to(:entries)
