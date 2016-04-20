@@ -36,7 +36,7 @@ class MenuController
         system "clear"
         read_csv
         main_menu
-      when "5"
+      when 5
         system "clear"
         @address_book.destructo_beam
         puts "There can be only none!"
